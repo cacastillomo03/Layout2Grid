@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
+
+}
+
+.grid-container{
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    
+}
+
+body .article, .aside, .footer, .navbar, .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    border-radius: 4px;
+    grid-area: header;
+    background-color: blueviolet;
+}
+.navbar{
+    grid-area: navbar;
+    background-color: chartreuse;
+}
+
+.aside{
+    grid-area: aside;
+    background-color: coral;
+}
+
+.main{
+    grid-area: main;
+    background-color: darkkhaki;
+}
+.article{
+    grid-area: article;
+    background-color: deeppink;
+}
+.p{
+    grid-area: parrafo;
+    background-color: #000;
+    color: white;
+}
+.section{
+    grid-area: section;
+    background-color: #f2f2f2ff
+    ;
+    
+}
+
+.footer{
+    grid-area: footer;
+    background-color: forestgreen;
+}
+.grid-container{
+    display: grid;
+    background-color: aqua;
+    gap: 3px;
+    
+    grid-template-areas:  
+    "header   "
+    "navbar "  
+    "aside"
+    "main"
+    "footer ";
+    
+
+
+}
+
+@media(max-width:600px){
+
+    .grid-container{
+        background-color: blue;
+        grid-template: 
+        "header  header header   " 100px
+        "navbar  navbar  navbar  " 20px 
+        "aside    main    main"   auto
+        "footer  footer footer"   100px 
+    ;
+    }
+}
+
+@media(min-width:320px){
+
+    .grid-container{
+        background-color: blue;
+        grid-template: 
+        "header  header header   " 80px
+        "navbar  navbar  navbar  " 50px 
+        "main   main  aside    "   auto
+        "footer  footer footer"   100px 
+    ;
+    }
+}
+
+@media(min-width:800px){
+
+    .grid-container{
+        background-color: blue;
+        grid-template:  
+        "header  header header   " 80px
+        "navbar  navbar  navbar  " 50px
+        " aside  main   footer    " auto
+        
+    ;
+    }
+}
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container .main article, section, P {
+    width: 80%;
+    height: 60px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
